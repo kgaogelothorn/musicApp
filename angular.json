@@ -28,7 +28,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -68,11 +67,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "musicApp:build"
+            "browserTarget": "musicApp:build",
+            "proxyConfig": "proxy.conf.json"
+
           },
           "configurations": {
             "production": {
-              "browserTarget": "musicApp:build:production"
+              "browserTarget": "musicApp:build:production",
+              "proxyConfig": "proxy.conf.json"
+
             }
           }
         },

@@ -1,0 +1,13 @@
+{
+    "/**": {
+      "target": {
+          "host": "api.deezer.com",
+          "protocol": "https:",
+          "port": 443
+        },
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "info"
+    }
+  }
+  
