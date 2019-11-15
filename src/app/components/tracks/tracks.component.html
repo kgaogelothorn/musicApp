@@ -9,7 +9,7 @@
           dy=".3em">Thumbnail</text>
       </svg>
       <img *ngIf="track.albumArt"  [routerLink]="['/track/'+ track.id]" routerLinkActive="router-link-active" [src]="track.albumArt" class="bd-placeholder-img card-img-top" width="100%"
-        height="180">
+        height="250">
       <div class="card-body">
         <h5 class="card-title">{{track.title}} <span class="badge badge-light float-right"> </span></h5>
         <p class="card-title">
