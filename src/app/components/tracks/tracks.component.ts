@@ -12,7 +12,6 @@ export class TracksComponent implements OnInit, AfterViewInit {
 
   constructor(
     readonly dataService: DataService) {
-
    }
 
   ngOnInit() {
@@ -21,7 +20,6 @@ export class TracksComponent implements OnInit, AfterViewInit {
 ngAfterViewInit() {
   this.dataService.data.subscribe((res: Tracks) => {
     this.tracks = res;
-    console.log('Tracks', this.tracks);
   });
 }
 }
