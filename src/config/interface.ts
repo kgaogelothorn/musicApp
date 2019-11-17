@@ -5,6 +5,7 @@ interface Data {
     duration: number;
     album: Album;
     title: string;
+    share: string;
   }
 
 interface Album extends Array<any> {}

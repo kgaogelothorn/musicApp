@@ -44,6 +44,7 @@ export class AppComponent implements OnInit {
   }
 
   showData(data: any) {
+    console.log(data)
     this.tracks = [];
     data.data.forEach((element: any) => {
       const track: any = {
@@ -52,7 +53,8 @@ export class AppComponent implements OnInit {
         album: element.album,
         duration: element.duration,
         artist: element.artist,
-        albumArt: element.album.cover_big
+        albumArt: element.album.cover_big,
+        share: element.link
      };
       this.tracks.push(track);
 
