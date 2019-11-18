@@ -44,7 +44,6 @@ export class AppComponent implements OnInit {
   }
 
   showData(data: any) {
-    console.log(data)
     this.tracks = [];
     data.data.forEach((element: any) => {
       const track: any = {

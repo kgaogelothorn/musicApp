@@ -10,8 +10,7 @@ import { Tracks } from '../../../config/interface';
 export class TracksComponent implements OnInit, AfterViewInit {
   tracks: Tracks = [];
 
-  constructor(
-    readonly dataService: DataService) {
+  constructor(readonly dataService: DataService) {
    }
 
   ngOnInit() {
