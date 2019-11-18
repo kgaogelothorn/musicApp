@@ -2,7 +2,7 @@
     <div class="row featurette">
         <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading">Top Tracks </h2>
-            <div class="media text-muted pt-3" *ngFor="let track  of tracklist">
+            <div class="media text-muted pt-3" *ngFor="let track of tracklist">
                     <img *ngIf="track.album.cover" [src]="track.album.cover" alt="track.title"
                         class="bd-placeholder-img mr-2 rounded" width="32" height="32">
                     <svg *ngIf="!track.album.cover" class="bd-placeholder-img mr-2 rounded" width="32" height="32"
