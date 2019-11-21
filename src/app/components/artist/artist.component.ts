@@ -12,6 +12,7 @@ export class ArtistComponent implements AfterViewInit {
   artistId: any = '';
   artist = {};
   tracklist: any = [];
+  loading = true;
 
   constructor(readonly api: ApiService, readonly route: ActivatedRoute, readonly dataService: DataService) {
     this.route.params.subscribe((param: any) => {
@@ -30,7 +31,8 @@ export class ArtistComponent implements AfterViewInit {
   getTracklist(data) {
     this.api.getTracklist(data.tracklist.replace('limit=50', 'limit=g')).subscribe((tracks: any) => {
       this.tracklist = tracks.data;
-    })
+      this.loading = false ;
+    });
   }
 
 }

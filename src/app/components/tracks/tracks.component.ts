@@ -9,6 +9,7 @@ import { Tracks } from '../../../config/interface';
 })
 export class TracksComponent implements OnInit, AfterViewInit {
   tracks: Tracks = [];
+  loading = true;
 
   constructor(readonly dataService: DataService) {
    }
@@ -19,6 +20,7 @@ export class TracksComponent implements OnInit, AfterViewInit {
 ngAfterViewInit() {
   this.dataService.data.subscribe((res: Tracks) => {
     this.tracks = res;
+    this.loading = false;
   });
 }
 }

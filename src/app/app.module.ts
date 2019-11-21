@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TracksComponent } from './components/tracks/tracks.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { TrackComponent } from './components/track/track.component';
-import { RouterModule } from '@angular/router';
+import { LoaderComponent } from 'src/common/loader/loader';
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { RouterModule } from '@angular/router';
     TracksComponent,
     ArtistComponent,
     TrackComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
