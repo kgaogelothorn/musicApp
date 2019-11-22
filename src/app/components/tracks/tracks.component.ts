@@ -15,12 +15,12 @@ export class TracksComponent implements OnInit, AfterViewInit {
    }
 
   ngOnInit() {
+    this.dataService.data.subscribe((res: Tracks) => {
+      this.tracks = res;
+      this.loading = false;
+    });
   }
 
 ngAfterViewInit() {
-  this.dataService.data.subscribe((res: Tracks) => {
-    this.tracks = res;
-    this.loading = false;
-  });
 }
 }

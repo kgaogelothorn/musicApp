@@ -29,9 +29,9 @@ export class ArtistComponent implements AfterViewInit {
     });
   }
   getTracklist(data) {
-    this.api.getTracklist(data.tracklist.replace('limit=50', 'limit=g')).subscribe((tracks: any) => {
+    this.api.getTracklist(data.tracklist.replace('limit=50', 'limit=5')).subscribe((tracks: any) => {
       this.tracklist = tracks.data;
-      this.loading = false ;
+      this.loading = false;
     });
   }
 
